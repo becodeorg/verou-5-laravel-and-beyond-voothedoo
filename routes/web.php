@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/issues-create', [Issues::class, 'showForm'])->name('createIssue');
-Route::post('/issues-create', [Issues::class, 'create']);
+Route::get('/issue/create', [Issues::class, 'showForm'])->name('createIssue');
+Route::post('/issue/create', [Issues::class, 'create']);
 Route::get('/issues',[Issues::class, 'index']);
 Route::get('/issue/{id}', [Issues::class, 'show'])->name('showIssue');

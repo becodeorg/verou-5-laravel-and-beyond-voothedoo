@@ -20,7 +20,7 @@
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
             <label for="description">Description</label>
-            <textarea name="description" id="description" rows="5"></textarea>
+            <textarea name="description" id="description" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula ante non mi vehicula, sed suscipit nulla scelerisque. Nam eleifend consequat dolor, eu mollis ipsum faucibus nec. Duis dignissim vitae risus ut bibendum. Nunc vitae eros eu libero laoreet ultricies. Sed sit amet nisi nec nulla volutpat bibendum.</textarea>
             <label for="priority">Select an option:</label>
             <select name="priority" id="priority">
                 <option value=""></option>

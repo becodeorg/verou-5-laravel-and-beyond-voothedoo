@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    Issue No: 32
+    Issue number: {{ $issue->id }}
 @endsection
 
 @section('content')

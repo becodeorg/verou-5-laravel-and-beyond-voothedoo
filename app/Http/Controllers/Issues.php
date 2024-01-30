@@ -49,7 +49,7 @@ class Issues extends Controller
             'created_by'=> $createdBy,
         ]);
         
-        return redirect('/issues-create');
+        return redirect('/issues');
     }
 
     public function showForm()

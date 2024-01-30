@@ -16,11 +16,11 @@ class Issues extends Controller
         ]);
     }
 
-    public function showForm()
+    public function show($id)
     {
-        $users= User::all();
-        return view('issues.create', [
-            'users'=> $users,
+        $issue = Issue::find($id);
+        return view ('issues.show', [
+            'issue'=>$issue
         ]);
     }
 
@@ -32,14 +32,14 @@ class Issues extends Controller
             'priority' => 'required|in:low,medium,high',
             'assigned_to' => 'exists:users,id',
         ]);
-
+        
         $title = $validate['title'];
         $description = $validate['description'];
         $priority = $validate['priority'];
         $assignedTo = $validate['assigned_to'];
         $status = 'open';
         $createdBy = '1';
-
+        
         Issue::create([
             'title'=>$title,
             'description'=>$description,
@@ -48,7 +48,15 @@ class Issues extends Controller
             'assigned_to'=> $assignedTo,
             'created_by'=> $createdBy,
         ]);
-
+        
         return redirect('/issues-create');
+    }
+
+    public function showForm()
+    {
+        $users= User::all();
+        return view('issues.create', [
+            'users'=> $users,
+        ]);
     }
 }

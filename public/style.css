@@ -20,4 +20,15 @@ body header nav ul {
 body header nav ul li a {
   color: rgb(95, 131, 252);
   padding: 0 5px;
+  text-decoration: none;
+}
+body main {
+  display: flex;
+  justify-content: center;
+}
+body main form#create-issue {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 100px;
 }/*# sourceMappingURL=style.css.map */

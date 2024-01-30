@@ -19,9 +19,20 @@ body {
           a {
             color: rgb(95, 131, 252);
             padding: 0 5px;
+            text-decoration: none;
           }
         }
       }
+    }
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    form#create-issue {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 100px;
     }
   }
 }

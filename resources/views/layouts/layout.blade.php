@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    @include('header')
+    @include('includes/header')
     @yield('content')
 </body>
 

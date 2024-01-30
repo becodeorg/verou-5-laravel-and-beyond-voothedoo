@@ -6,7 +6,7 @@
         <ul class="nav links">
             <li><a href="/">Home</a></li>
             <li><a href="/issues">Issues</a></li>
-            <li><a href="/issues/create">Create Issue</a></li>
+            <li><a href="{{ route('createIssue') }}">Create Issue</a></li>
             <li><a href="/my-issues">My Issues</a></li>
             <li><a href="/profile">Profile</a></li>
             <li><a href="/logout">Logout</a></li>

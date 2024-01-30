@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class Issues extends Controller
 {
+    public function index()
+    {
+        $issues = Issue::all();
+        return view ('issues.index', [
+            'issues'=> $issues,
+        ]);
+    }
+
     public function showForm()
     {
         $users= User::all();

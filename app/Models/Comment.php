@@ -12,4 +12,14 @@ class Comment extends Model
         'user_id',
         'comment_text',
     ];
+
+    public function issue()
+    {
+        return $this->belongsTo(Issue::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

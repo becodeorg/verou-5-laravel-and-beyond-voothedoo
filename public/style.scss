@@ -6,11 +6,17 @@
 }
 
 body {
-  background-color: rgb(45, 45, 58);
+  background-color: rgb(45, 45, 49);
   header {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    div {
+      h1 {
+        color: white;
+      }
+    }
     nav {
       ul {
         display: flex;
@@ -29,6 +35,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    table.issues {
+      margin: 20px 0;
+      color: white;
+      border-collapse: collapse;
+      th,
+      td {
+        border: 1px solid #616161;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #494949;
+      }
+      a {
+        color: rgb(95, 131, 252);
+        text-decoration: none;
+      }
+    }
     div.alert-danger {
       margin-bottom: -100px;
       margin-top: 100px;
@@ -36,17 +60,40 @@ body {
       font-size: 1.3rem;
     }
     form#create-issue {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      margin-top: 100px;
+      margin-top: 20px;
+      color: white;
+
       label {
-        margin-top: 10px;
-        color: rgb(109, 112, 131);
+        display: block;
+        margin-bottom: 5px;
       }
-      button {
-        padding: 10px 30px;
-        margin: 20px auto 0;
+
+      input[type="text"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #616161;
+        background-color: #424242;
+        color: white;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button[type="submit"] {
+        width: auto;
+        background-color: #494949;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #616161;
+        }
       }
     }
   }

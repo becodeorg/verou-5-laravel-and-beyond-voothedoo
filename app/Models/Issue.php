@@ -15,4 +15,19 @@ class Issue extends Model
         'assigned_to',
         'created_by',
     ];
+
+    public function assignedToUser()
+    {
+        return $this->belongsTo(User::class, 'assigned_to');
+    }
+
+    public function createdByUser()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

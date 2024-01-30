@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/issues-create', [Issues::class, 'showForm'])->name('createIssue');
+Route::post('/issues-create', [Issues::class, 'create']);

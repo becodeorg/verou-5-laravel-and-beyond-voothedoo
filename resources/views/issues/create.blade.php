@@ -6,7 +6,17 @@
 
 @section('content')
     <main>
-        <form id="create-issue" action="">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form id="create-issue" action="" method="POST">
+            @csrf
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
             <label for="description">Description</label>
@@ -15,7 +25,7 @@
             <select name="priority" id="priority">
                 <option value=""></option>
                 <option value="low">Low</option>
-                <option value="edium">Medium</option>
+                <option value="medium">Medium</option>
                 <option value="high">High</option>
             </select>
             <label for="assigned_to">Assign this issue to:</label>

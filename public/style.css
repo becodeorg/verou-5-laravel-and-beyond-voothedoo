@@ -48,6 +48,41 @@ body main table.issues a {
   color: rgb(95, 131, 252);
   text-decoration: none;
 }
+body main a.back-button {
+  text-decoration: none;
+  align-self: flex-start;
+  color: rgb(95, 131, 252);
+  background-color: #424242;
+  padding: 5px 20px;
+  border: 1px solid rgb(95, 131, 252);
+  margin-top: 50px;
+  margin-left: 10px;
+}
+body main a.back-button:hover,
+body main a.back-button:focus {
+  background-color: #616161;
+}
+body main h2.issue-priority {
+  align-self: flex-start;
+  margin: 40px 10px 0 10px;
+  color: white;
+}
+body main div.issue-wrapper {
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  border: 1px solid #616161;
+}
+body main div.issue-wrapper h3.issue-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 0 10px 0;
+}
+body main div.issue-wrapper p.issue-description {
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
 body main div.alert-danger {
   margin-bottom: -100px;
   margin-top: 100px;

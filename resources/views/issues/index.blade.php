@@ -27,7 +27,7 @@
                             @elseif ($issue->status == 'in_progress')
                                 In Progress
                             @else
-                                Closed
+                                Resolved
                             @endif
                         </td>
                         <td>{{ $issue->priority }}</td>

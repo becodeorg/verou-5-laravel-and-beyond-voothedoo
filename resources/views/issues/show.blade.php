@@ -5,13 +5,17 @@
 @endsection
 
 @section('content')
-    <a href="/issues" class="back-button">Back</a>
-    <h2>Ticket Priority: {{ $issue->priority }}</h2>
-    <h3 class="issue-title">{{ $issue->title }}</h3>
-    <p class="issue-description">{{ $issue->description }}</p>
-    <form action="{{ route('closeIssue', ['id' => $issue->id]) }}" method="POST">
-        @csrf
-        <input type="hidden" name="status" value="resolved">
-        <button type="submit">Close Ticket</button>
-    </form>
+    <main>
+        <a href="/issues" class="back-button">Back</a>
+        <h2 class="issue-priority">Ticket Priority: {{ $issue->priority }}</h2>
+        <div class="issue-wrapper">
+            <h3 class="issue-title">{{ $issue->title }}</h3>
+            <p class="issue-description">{{ $issue->description }}</p>
+        </div>
+        <form action="{{ route('closeIssue', ['id' => $issue->id]) }}" method="POST">
+            @csrf
+            <input type="hidden" name="status" value="resolved">
+            <button type="submit" class="close-issue">Close Ticket</button>
+        </form>
+    </main>
 @endsection

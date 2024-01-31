@@ -53,6 +53,43 @@ body {
         text-decoration: none;
       }
     }
+    // showIssuePage
+    a.back-button {
+      text-decoration: none;
+      align-self: flex-start;
+      color: rgb(95, 131, 252);
+      background-color: #424242;
+      padding: 5px 20px;
+      border: 1px solid rgb(95, 131, 252);
+      margin-top: 50px;
+      margin-left: 10px;
+    }
+    a.back-button:hover,
+    a.back-button:focus {
+      background-color: #616161;
+    }
+    h2.issue-priority {
+      align-self: flex-start;
+      margin: 40px 10px 0 10px;
+      color: white;
+    }
+    div.issue-wrapper {
+      margin: 10px 10px 10px 10px;
+      padding: 10px;
+      border: 1px solid #616161;
+      h3.issue-title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 200;
+        margin: 0 0 10px 0;
+      }
+      p.issue-description {
+        color: white;
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+    }
+    // ^showissuepage
     div.alert-danger {
       margin-bottom: -100px;
       margin-top: 100px;

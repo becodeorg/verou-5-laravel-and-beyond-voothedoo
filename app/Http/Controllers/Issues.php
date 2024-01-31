@@ -19,9 +19,23 @@ class Issues extends Controller
     public function show($id)
     {
         $issue = Issue::find($id);
+
+        if ($issue->status === 'open'){
+            $issue->status = 'in_progress';
+            $issue->save();
+        }
+
         return view ('issues.show', [
             'issue'=>$issue
         ]);
+    }
+
+    public function close($id, Request $request)
+    {
+        $issue = Issue::find($id);
+        $issue->status = $request['status'];
+        $issue->save();
+        return redirect('/issues');
     }
 
     public function create(Request $request)

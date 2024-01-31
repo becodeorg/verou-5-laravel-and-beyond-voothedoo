@@ -21,7 +21,15 @@
                 @foreach ($issues as $issue)
                     <tr>
                         <td><a href="{{ route('showIssue', ['id' => $issue->id]) }}">{{ $issue->title }}</a></td>
-                        <td>{{ $issue->status }}</td>
+                        <td>
+                            @if ($issue->status == 'open')
+                                Open
+                            @elseif ($issue->status == 'in_progress')
+                                In Progress
+                            @else
+                                Closed
+                            @endif
+                        </td>
                         <td>{{ $issue->priority }}</td>
                         <td>{{ $issue->assignedToUser->name }}</td>
                         <td>{{ $issue->createdByUser->name }}</td>

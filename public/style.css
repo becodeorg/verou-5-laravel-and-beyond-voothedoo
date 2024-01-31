@@ -98,6 +98,23 @@ body main div.issue-wrapper p.issue-description {
 body main form.close-issue-form button.close-issue {
   padding: 10px 20px;
 }
+body main div.add-comment-section {
+  width: 100%;
+}
+body main div.add-comment-section form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 10px 10px 10px;
+}
+body main div.add-comment-section form textarea#comment {
+  resize: vertical;
+}
+body main div.add-comment-section form button.submit-comment {
+  width: auto;
+  padding: 10px 5px;
+  margin: 10px 0 0 0;
+  width: 100px;
+}
 body main div.alert-danger {
   margin-bottom: -100px;
   margin-top: 100px;

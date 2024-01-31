@@ -18,5 +18,19 @@
             <input type="hidden" name="status" value="resolved">
             <button type="submit" class="close-issue">Close Ticket</button>
         </form>
+
+        <div class="add-comment-section">
+            <form action="" method="POST">
+                @csrf
+                <textarea name="comment" id="comment" rows="10"></textarea>
+                <button class="submit-comment">Send</button>
+            </form>
+        </div>
+
+        <div class="comments-section">
+            <p class="added-by">Added by: User</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis placeat, odio
+                magnam mollitia. Nihil recusandae adipisci sit?</p>
+        </div>
     </main>
 @endsection

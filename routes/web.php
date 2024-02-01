@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Issues;
+use App\Http\Controllers\Register;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,6 @@ Route::post('/issue/create', [Issues::class, 'create']);
 Route::get('/issues',[Issues::class, 'index']);
 Route::get('/issue/{id}', [Issues::class, 'show'])->name('showIssue');
 Route::post('/issue/close/{id}', [Issues::class, 'close'])->name('closeIssue');
+
+Route::get('/register', [Register::class, 'index'])->name('registerIndex');
+Route::post('/register', [Register::class, 'create'])->name('registerCreate');

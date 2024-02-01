@@ -6,8 +6,13 @@
 
 @section('content')
     <main>
-        <p>
-            laravel_and_beyond_body_section
-        </p>
+        @auth
+            <p>Hello, {{ auth()->user()->name }}
+            @endauth
+
+            @guest
+            <p>Welcome, Guest</p>
+            <p>Please Login</p>
+        @endguest
     </main>
 @endsection

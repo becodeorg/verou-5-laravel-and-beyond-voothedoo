@@ -16,7 +16,9 @@
         <form action="{{ route('closeIssue', ['id' => $issue->id]) }}" method="POST" class="close-issue-form">
             @csrf
             <input type="hidden" name="status" value="resolved">
-            <button type="submit" class="close-issue">Close Ticket</button>
+            @auth()
+                <button type="submit" class="close-issue">Close Ticket</button>
+            @endauth
         </form>
 
         <div class="all-comments-section">
@@ -26,14 +28,15 @@
                     magnam mollitia. Nihil recusandae adipisci sit?</p>
             </div>
         </div>
-
-        <div class="add-comment-section">
-            <form action="" method="POST">
-                @csrf
-                <textarea name="comment" id="comment" rows="5" placeholder="Add a comment"></textarea>
-                <button class="submit-comment">Send</button>
-            </form>
-        </div>
+        @auth()
+            <div class="add-comment-section">
+                <form action="" method="POST">
+                    @csrf
+                    <textarea name="comment" id="comment" rows="5" placeholder="Add a comment"></textarea>
+                    <button class="submit-comment">Send</button>
+                </form>
+            </div>
+        @endauth
 
     </main>
 @endsection

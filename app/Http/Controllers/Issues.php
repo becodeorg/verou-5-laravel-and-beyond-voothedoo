@@ -20,7 +20,7 @@ class Issues extends Controller
     {
         $issue = Issue::find($id);
 
-        if ($issue->status === 'open'){
+        if ($issue->status === 'open' && auth()->user()){
             $issue->status = 'in_progress';
             $issue->save();
         }
@@ -52,7 +52,7 @@ class Issues extends Controller
         $priority = $validate['priority'];
         $assignedTo = $validate['assigned_to'];
         $status = 'open';
-        $createdBy = '1';
+        $createdBy = auth()->user()->id;
         
         Issue::create([
             'title'=>$title,

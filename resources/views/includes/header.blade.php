@@ -9,7 +9,7 @@
             @auth()
                 <li><a href="{{ route('createIssue') }}">Create Issue</a></li>
                 <li><a href="">Profile</a></li>
-                <li><a href="">Logout</a></li>
+                <li><a href="{{ route('logout') }}">Logout</a></li>
             @endauth
             @guest
                 <li><a href="/register">Login/Register</a></li>

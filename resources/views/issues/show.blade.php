@@ -19,18 +19,21 @@
             <button type="submit" class="close-issue">Close Ticket</button>
         </form>
 
+        <div class="all-comments-section">
+            <div class="single-comment-section">
+                <p class="added-by">Added by: User</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis placeat, odio
+                    magnam mollitia. Nihil recusandae adipisci sit?</p>
+            </div>
+        </div>
+
         <div class="add-comment-section">
             <form action="" method="POST">
                 @csrf
-                <textarea name="comment" id="comment" rows="10"></textarea>
+                <textarea name="comment" id="comment" rows="5" placeholder="Add a comment"></textarea>
                 <button class="submit-comment">Send</button>
             </form>
         </div>
 
-        <div class="comments-section">
-            <p class="added-by">Added by: User</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis placeat, odio
-                magnam mollitia. Nihil recusandae adipisci sit?</p>
-        </div>
     </main>
 @endsection

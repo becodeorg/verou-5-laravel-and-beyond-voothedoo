@@ -40,7 +40,7 @@
                     <textarea name="comment" id="comment" rows="5" placeholder="Add a comment"></textarea>
                     <input type="hidden" name="issue-id" value="{{ $issue->id }}">
                     <input type="hidden" name="user-id" value="{{ auth()->user()->id }}">
-                    <button class="submit-comment">Send</button>
+                    <button class="submit-comment">Comment</button>
 
                 </form>
             </div>

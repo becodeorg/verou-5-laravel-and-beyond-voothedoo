@@ -27,3 +27,4 @@ Route::post('/issue/close/{id}', [Issues::class, 'close'])->name('closeIssue');
 
 Route::get('/register', [Register::class, 'index'])->name('registerIndex');
 Route::post('/register', [Register::class, 'create'])->name('registerCreate');
+Route::post('/register/login', [Register::class, 'login'])->name('login');

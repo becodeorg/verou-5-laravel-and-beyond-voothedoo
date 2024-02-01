@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\validate;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class Register extends Controller
@@ -37,5 +38,23 @@ class Register extends Controller
         auth()->login($user);
 
         return redirect('/');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'login-username'=> 'required|string|max:255',
+            'login-password'=> 'required|string|max:255',
+        ]);
+
+        $username = $credentials['login-username'];
+        $password = $credentials['login-password'];
+
+        if (Auth::attempt([
+        'name' => $username,
+        'password' => $password,
+        ])) {
+            return redirect('/');
+        }
     }
 }

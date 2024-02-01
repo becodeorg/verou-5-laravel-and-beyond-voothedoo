@@ -34,10 +34,10 @@
             </div>
 
             <div class="login">
-                <form action="" class="login-form">
+                <form action="{{ route('login') }}" class="login-form" method="POST">
                     @csrf
                     <h2>Already an user?</h2>
-                    <label for="login-username">Username: </label>
+                    <label for="cc">Username: </label>
                     <input type="text" name="login-username" id="login-username">
                     <label for="login-password">Password: </label>
                     <input type="password" name="login-password" id="login-password">

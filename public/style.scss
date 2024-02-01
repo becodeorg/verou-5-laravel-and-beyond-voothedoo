@@ -18,6 +18,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     min-width: 1000px;
     div {
       h1 {
@@ -31,8 +32,25 @@ body {
         li {
           a {
             color: rgb(95, 131, 252);
-            padding: 0 5px;
+            margin: 0 10px;
             text-decoration: none;
+          }
+          a:hover,
+          a:focus {
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(95, 131, 252);
+          }
+          a.login-logout {
+            background-color: rgb(95, 131, 252);
+            color: #252525;
+            font-weight: 500;
+            padding: 3px 7px;
+            border-radius: 3px;
+          }
+          a.login-logout:hover,
+          a.login-logout:focus {
+            border: none;
+            background-color: rgb(72, 102, 201);
           }
         }
       }

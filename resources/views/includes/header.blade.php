@@ -1,18 +1,18 @@
 <header>
     <div class="logo">
-        <h1>Track Issues</h1>
+        <h1>TicketEase</h1>
     </div>
     <nav>
         <ul class="nav links">
             <li><a href="/">Home</a></li>
-            <li><a href="/issues">Issues</a></li>
+            <li><a href="/issues">Tickets</a></li>
             @auth()
-                <li><a href="{{ route('createIssue') }}">Create Issue</a></li>
+                <li><a href="{{ route('createIssue') }}">Create Ticket</a></li>
                 <li><a href="">Profile</a></li>
-                <li><a href="{{ route('logout') }}">Logout</a></li>
+                <li><a href="{{ route('logout') }}" class="login-logout">Logout</a></li>
             @endauth
             @guest
-                <li><a href="/register">Login/Register</a></li>
+                <li><a href="/register" class="login-logout">Login/Register</a></li>
             @endguest
         </ul>
     </nav>

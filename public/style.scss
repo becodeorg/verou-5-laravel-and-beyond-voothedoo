@@ -21,8 +21,14 @@ body {
     align-items: center;
     min-width: 1000px;
     div {
-      h1 {
+      h1.logo {
         color: white;
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 3rem;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
       }
     }
     nav {
@@ -62,6 +68,29 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 1000px;
+
+    //Homepage-----------------
+    div.greetings {
+      h1.greet-user {
+        margin-top: 5rem;
+        color: white;
+        font-size: 3rem;
+      }
+      span.user-span {
+        color: yellowgreen;
+      }
+      p.under-greet {
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+      a {
+        color: rgb(95, 131, 252);
+        text-decoration: none;
+      }
+    }
+    // /homepage---
+
     table.issues {
       margin: 20px 0;
       color: white;
@@ -127,6 +156,32 @@ body {
     form.close-issue-form {
       button.close-issue {
         padding: 10px 20px;
+      }
+    }
+    div.all-comments-section {
+      margin-top: 5rem;
+      div.single-comment-section {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #616161;
+        border-radius: 20px;
+        background-color: #424242;
+        p.added-by {
+          color: white;
+          span.user-span {
+            color: yellowgreen;
+            font-size: 1.3rem;
+            font-style: italic;
+          }
+        }
+        p.added-on {
+          color: #858585;
+          margin-bottom: 15px;
+        }
+        p.comment {
+          color: white;
+          line-height: 1.5;
+        }
       }
     }
     div.add-comment-section {

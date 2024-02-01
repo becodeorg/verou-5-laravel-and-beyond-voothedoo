@@ -6,13 +6,16 @@
 
 @section('content')
     <main>
-        @auth
-            <p>Hello, {{ auth()->user()->name }}
+        <div class="greetings">
+            @auth
+                <h1 class="greet-user">Welcome back, <span class="user-span">{{ auth()->user()->name }}</span>!</h1>
             @endauth
 
             @guest
-            <p>Welcome, Guest</p>
-            <p>Please Login</p>
-        @endguest
+                <h1 class="greet-user">Welcome, <span class="user-span">Guest</span>!</h1>
+                <p class="under-greet"> <a href="/register">Login</a></p>
+            @endguest
+        </div>
+
     </main>
 @endsection

@@ -23,8 +23,10 @@
 
         <div class="all-comments-section">
             <div class="single-comment-section">
-                <p class="added-by">Added by: User</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis placeat, odio
+                <p class="added-by">Added by: <span class="user-span">User</span> </p>
+                <p class="added-on">Added Today</p>
+                <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis
+                    placeat, odio
                     magnam mollitia. Nihil recusandae adipisci sit?</p>
             </div>
         </div>

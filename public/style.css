@@ -22,8 +22,14 @@ body header {
   align-items: center;
   min-width: 1000px;
 }
-body header div h1 {
+body header div h1.logo {
   color: white;
+}
+body header div h1.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 body header nav ul {
   display: flex;
@@ -57,6 +63,23 @@ body main {
   flex-direction: column;
   align-items: center;
   max-width: 1000px;
+}
+body main div.greetings h1.greet-user {
+  margin-top: 5rem;
+  color: white;
+  font-size: 3rem;
+}
+body main div.greetings span.user-span {
+  color: yellowgreen;
+}
+body main div.greetings p.under-greet {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+body main div.greetings a {
+  color: rgb(95, 131, 252);
+  text-decoration: none;
 }
 body main table.issues {
   margin: 20px 0;
@@ -119,6 +142,32 @@ body main div.issue-wrapper p.issue-description {
 }
 body main form.close-issue-form button.close-issue {
   padding: 10px 20px;
+}
+body main div.all-comments-section {
+  margin-top: 5rem;
+}
+body main div.all-comments-section div.single-comment-section {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #616161;
+  border-radius: 20px;
+  background-color: #424242;
+}
+body main div.all-comments-section div.single-comment-section p.added-by {
+  color: white;
+}
+body main div.all-comments-section div.single-comment-section p.added-by span.user-span {
+  color: yellowgreen;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+body main div.all-comments-section div.single-comment-section p.added-on {
+  color: #858585;
+  margin-bottom: 15px;
+}
+body main div.all-comments-section div.single-comment-section p.comment {
+  color: white;
+  line-height: 1.5;
 }
 body main div.add-comment-section {
   width: 100%;

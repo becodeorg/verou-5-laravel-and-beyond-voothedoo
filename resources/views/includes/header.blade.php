@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <h1>TicketEase</h1>
+        <h1 class="logo"><a href="/"> @TicketEase</a></h1>
     </div>
     <nav>
         <ul class="nav links">

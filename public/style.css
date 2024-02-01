@@ -180,8 +180,24 @@ body main div.add-comment-section form {
   flex-direction: column;
   margin: 50px 10px 10px 10px;
 }
+body main div.add-comment-section form p.commenting-as {
+  color: rgb(212, 212, 212);
+  margin-bottom: 5px;
+}
+body main div.add-comment-section form p.commenting-as span.user-span {
+  color: rgb(86, 128, 23);
+}
 body main div.add-comment-section form textarea#comment {
   resize: vertical;
+  border-radius: 5px;
+  background-color: #858585;
+  font-size: 1.3rem;
+}
+body main div.add-comment-section form textarea::-moz-placeholder {
+  color: #424242;
+}
+body main div.add-comment-section form textarea::placeholder {
+  color: #424242;
 }
 body main div.add-comment-section form button.submit-comment {
   width: auto;

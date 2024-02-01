@@ -193,8 +193,21 @@ body {
         display: flex;
         flex-direction: column;
         margin: 50px 10px 10px 10px;
+        p.commenting-as {
+          color: rgb(212, 212, 212);
+          margin-bottom: 5px;
+          span.user-span {
+            color: rgb(86, 128, 23);
+          }
+        }
         textarea#comment {
           resize: vertical;
+          border-radius: 5px;
+          background-color: #858585;
+          font-size: 1.3rem;
+        }
+        textarea::placeholder {
+          color: #424242;
         }
         button.submit-comment {
           width: auto;

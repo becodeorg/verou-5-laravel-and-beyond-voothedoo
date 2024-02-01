@@ -144,6 +144,7 @@ body main form.close-issue-form button.close-issue {
   padding: 10px 20px;
 }
 body main div.all-comments-section {
+  width: 100%;
   margin-top: 5rem;
 }
 body main div.all-comments-section div.single-comment-section {
@@ -164,6 +165,8 @@ body main div.all-comments-section div.single-comment-section p.added-by span.us
 body main div.all-comments-section div.single-comment-section p.added-on {
   color: #858585;
   margin-bottom: 15px;
+  border-bottom: 1px solid #494949;
+  padding-bottom: 10px;
 }
 body main div.all-comments-section div.single-comment-section p.comment {
   color: white;

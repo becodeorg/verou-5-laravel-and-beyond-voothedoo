@@ -20,22 +20,28 @@
                 <button type="submit" class="close-issue">Close Ticket</button>
             @endauth
         </form>
-
         <div class="all-comments-section">
-            <div class="single-comment-section">
-                <p class="added-by">Added by: <span class="user-span">User</span> </p>
-                <p class="added-on">Added Today</p>
-                <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima natus perferendis
-                    placeat, odio
-                    magnam mollitia. Nihil recusandae adipisci sit?</p>
-            </div>
+            @if ($comments)
+                @foreach ($comments as $comment)
+                    <div class="single-comment-section">
+                        <p class="added-by">Added by: <span class="user-span">{{ $comment->user->name }}</span> </p>
+                        <p class="added-on">Date added: {{ $comment->created_at }}</p>
+                        <p class="comment">{{ $comment->comment_text }}</p>
+                    </div>
+                @endforeach
+            @endif
         </div>
         @auth()
             <div class="add-comment-section">
-                <form action="" method="POST">
+                <form action="{{ route('addComment') }}" method="POST">
                     @csrf
+                    @method('POST')
+                    <p class="commenting-as">Commenting as: <span class="user-span">{{ auth()->user()->name }}</span></p>
                     <textarea name="comment" id="comment" rows="5" placeholder="Add a comment"></textarea>
+                    <input type="hidden" name="issue-id" value="{{ $issue->id }}">
+                    <input type="hidden" name="user-id" value="{{ auth()->user()->id }}">
                     <button class="submit-comment">Send</button>
+
                 </form>
             </div>
         @endauth

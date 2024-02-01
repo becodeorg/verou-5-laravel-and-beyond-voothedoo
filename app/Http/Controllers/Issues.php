@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Issue;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Issues extends Controller
 {
@@ -20,13 +22,15 @@ class Issues extends Controller
     {
         $issue = Issue::find($id);
 
+        $comments = Comment::with('user')->where('issue_id', $id)->get();
         if ($issue->status === 'open' && auth()->user()){
             $issue->status = 'in_progress';
             $issue->save();
         }
 
         return view ('issues.show', [
-            'issue'=>$issue
+            'issue'=>$issue,
+            'comments'=>$comments,
         ]);
     }
 

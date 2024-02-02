@@ -56,6 +56,8 @@ class Register extends Controller
         ])) {
             return redirect('/');
         }
+        
+        return back();
     }
 
     public function logout(Request $request)

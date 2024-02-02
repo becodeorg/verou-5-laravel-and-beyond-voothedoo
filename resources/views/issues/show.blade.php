@@ -15,9 +15,14 @@
         </div>
         <form action="{{ route('closeIssue', ['id' => $issue->id]) }}" method="POST" class="close-issue-form">
             @csrf
-            <input type="hidden" name="status" value="resolved">
             @auth()
-                <button type="submit" class="close-issue">Close Ticket</button>
+                @if ($issue->status === 'resolved')
+                    <input type="hidden" name="status" value="open">
+                    <button type="submit" class="close-issue">Open ticket again</button>
+                @elseif ($issue->assigned_to === auth()->user()->id)
+                    <input type="hidden" name="status" value="resolved">
+                    <button type="submit" class="close-issue">Close Ticket</button>
+                @endif
             @endauth
         </form>
         <div class="all-comments-section">

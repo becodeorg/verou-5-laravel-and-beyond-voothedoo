@@ -23,11 +23,13 @@ class Issues extends Controller
         $issue = Issue::find($id);
 
         $comments = Comment::with('user')->where('issue_id', $id)->get();
-        if ($issue->status === 'open' && auth()->user()){
-            $issue->status = 'in_progress';
-            $issue->save();
+        if(auth()->user()) {
+            if ($issue->status === 'open'){
+                $issue->status = 'in_progress';
+                $issue->save();
+            }
         }
-
+        
         return view ('issues.show', [
             'issue'=>$issue,
             'comments'=>$comments,
@@ -39,6 +41,7 @@ class Issues extends Controller
         $issue = Issue::find($id);
         $issue->status = $request['status'];
         $issue->save();
+
         return redirect('/issues');
     }
 

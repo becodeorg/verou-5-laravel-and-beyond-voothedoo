@@ -26,15 +26,13 @@
             @endauth
         </form>
         <div class="all-comments-section">
-            @if ($comments)
-                @foreach ($comments as $comment)
-                    <div class="single-comment-section">
-                        <p class="added-by">Added by: <span class="user-span">{{ $comment->user->name }}</span> </p>
-                        <p class="added-on">Date added: {{ $comment->created_at }}</p>
-                        <p class="comment">{{ $comment->comment_text }}</p>
-                    </div>
-                @endforeach
-            @endif
+            @foreach ($comments as $comment)
+                <div class="single-comment-section">
+                    <p class="added-by">Added by: <span class="user-span">{{ $comment->user->name }}</span> </p>
+                    <p class="added-on">Date added: {{ $comment->created_at }}</p>
+                    <p class="comment">{{ $comment->comment_text }}</p>
+                </div>
+            @endforeach
         </div>
         @auth()
             <div class="add-comment-section">

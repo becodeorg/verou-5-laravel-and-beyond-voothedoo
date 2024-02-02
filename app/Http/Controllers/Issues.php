@@ -23,6 +23,9 @@ class Issues extends Controller
         $issue = Issue::find($id);
 
         $comments = Comment::with('user')->where('issue_id', $id)->get();
+
+
+
         if(auth()->user()) {
             if ($issue->status === 'open'  && auth()->user()->id === $issue->assigned_to ){
                 $issue->status = 'in_progress';
